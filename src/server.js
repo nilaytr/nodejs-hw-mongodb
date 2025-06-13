@@ -36,7 +36,7 @@ export const setupServer = () => {
             });
         } catch (error) {
             res.json({
-                status: 500,
+                status: 404,
                 message: 'Error fetching contacts',
                 error: error.message,
             });
@@ -61,8 +61,8 @@ export const setupServer = () => {
             });
         } catch (error) {
             res.json({
-                status: 500,
-                message: 'Error fetching contact',
+                status: 404,
+                message: 'Contact not found',
                 error: error.message,
             });
         }
